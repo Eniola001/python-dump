@@ -220,6 +220,7 @@ def multiply(a, b):
   print("Multiplying")
   return a * b
 
+
 print("Program started")
 answer = multiply(3, 4)
 print("Answer:", answer)
