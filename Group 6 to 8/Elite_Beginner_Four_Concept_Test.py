@@ -198,4 +198,9 @@ print(hash_map)
 
   # However, in the worst-case scenario where all keys land in one bucket (due to poor hash function or many collisions), the time complexity for these operations can degrade to O(n), where n is the number of keys in that bucket. In this case, we would have to iterate through all the key-value pairs in that single bucket to find, update, or delete a key.
 
-  # A larger table can help reduce the likelihood of collisions by providing more slots for keys to be distributed across. This can improve the average-case performance of the hash map but it also requires more memory and does not guarantee collision-free hashing. The performance will depend on the quality of the hash function and the distribution of keys. 
+  # A larger table can help reduce the likelihood of collisions by providing more slots for keys to be distributed across. This can improve the average-case performance of the hash map but it also requires more memory and does not guarantee collision-free hashing. The performance will depend on the quality of the hash function and the distribution of keys.
+
+
+##########
+# QUEST 4 — Decorators
+##########
