@@ -212,14 +212,12 @@ def announce(func):
       result = func(*args, **kwargs)
       print("After function")
       return result
-  
   return wrapper
 
 @announce
 def multiply(a, b):
   print("Multiplying")
   return a * b
-
 
 print("Program started")
 answer = multiply(3, 4)
