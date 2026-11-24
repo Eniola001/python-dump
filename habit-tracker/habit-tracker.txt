@@ -1,0 +1,52 @@
+Project Goal
+Build a command-line tracker where the user sets up daily habits, checks them off each day, and sees streaks, completion rates and weekly summaries, with all data saved between sessions.
+Requirements
+Let the user add a habit by name.
+Mark a habit as done for today.
+Show today's status for every habit.
+Show the current streak (consecutive days completed) for each habit.
+
+Example Input:
+Menu choice: 2 (Mark habit done)
+Habit number: 1
+Expected Output:
+Today: Mon 23 Nov 2026
+
+
+Habit                 Today   Streak
+1. Read 20 minutes     [x]    5 days
+2. Drink water         [ ]    0 days
+3. Exercise            [x]   12 days
+
+Project Levels
+Level 1 — Basic (Medium)
+Store habits in a dictionary that maps each habit name to a list of dates it was completed.
+Use the datetime module to get today's date, and write a function that marks a habit done for today.
+Show every habit with a mark for whether it has been done today.
+Calculate the current streak by counting consecutive days back from today (or yesterday, if today is not done yet).
+
+Level 2 — Intermediate (Medium–Hard)
+Add a menu to add, rename and remove habits, and stop the same habit being marked twice on the same day.
+Reject duplicate or empty habit names and re-prompt on invalid input.
+Let the user mark a habit done for a past date (YYYY-MM-DD), validating the format and rejecting future dates.
+Show the completion rate for each habit over the last 7 days.
+
+Level 3 — Problem Solving (Hard)
+Save the habits to a JSON file and load them at startup; handle a missing, empty or corrupted file with a clear message instead of crashing.
+Show both the current streak and the longest streak ever for each habit.
+Print a weekly summary grid (Monday to Sunday) with x for done and - for missed for each habit.
+Let each habit have a target number of days per week and show whether the target was met this week, plus the 30-day completion percentage.
+
+Level 4 — Challenge (Hard)
+Print a text calendar for a chosen month that marks the days when all habits were completed, using only print statements.
+Add an optional streak freeze: one missed day per week that does not break a streak, switchable in a settings option.
+Show insights: the weekday each habit is completed most often, the most consistent habit, and the habit with the most missed days.
+Export a full report to CSV, and create a backup copy of the data file each time the program starts.
+At startup, list the habits still not done today and sort the habit list by current streak.
+
+Suggested Role Split (Group of 3)
+Member A — Tracking logic: marking habits, streak calculations, freeze rule, targets, insights.
+Member B — Display and input: menus, status table, weekly grid, text calendar, date validation.
+Member C — Data and persistence: JSON saving and loading, backups, CSV export, settings, corrupted-file handling.
+
+Agree on how data is passed between parts first (for example, a dictionary such as {"Read 20 minutes": {"target_per_week": 5, "done_dates": ["2026-11-20", "2026-11-21"]}}), so the three parts fit together at the end.
